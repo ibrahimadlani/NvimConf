@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
 	-- Telescope (Fuzzy Finder) & Plenary (Dependance de Telescope)
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.1', requires = { {'nvim-lua/plenary.nvim'} } }
 	-- GRUVBOX (Color Scheme)
-    -- use { 'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
+    use { 'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
 	-- TreeSitter (Code Parser & Highlighting)
 	use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} }
 	-- Harpoon (Fuzzy Finder ??? par ThePrimeagen)	
@@ -39,8 +39,11 @@ return require('packer').startup(function(use)
 
 	use { 'tpope/vim-fugitive' }
 
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
-    vim.cmd('colorscheme rose-pine')
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
 
 end)
 
