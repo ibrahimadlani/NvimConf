@@ -37,12 +37,16 @@ return require('packer').startup(function(use)
 		}
 	}
 
+	-- Fugitive (Git management)
 	use { 'tpope/vim-fugitive' }
 
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+
+
+    use { 'eandrju/cellular-automaton.nvim' }
 
 
 end)
