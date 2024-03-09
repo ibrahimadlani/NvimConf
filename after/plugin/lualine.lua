@@ -6,7 +6,7 @@ custom_gruvbox.normal.c.fg = '#eadab4'
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'custom_gruvbox',
+    theme = custom_gruvbox,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {

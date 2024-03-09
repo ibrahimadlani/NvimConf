@@ -26,16 +26,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- Le code crée des raccourcis pour lancer et arrêter l'outil "vim-with-me",
--- qui permet de collaborer en temps réel sur un document Vim.
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
-
-
 --  remplacer la sélection par le contenu du presse-papiers, tout en copiant la sélection originale dans le clipboard.
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
